@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caixa eletronico</title>
+</head>
+<body>
+   
+    Digite o valor a sacar:
+        <input type="text" id="valor">
+        <button onclick="Sacar();"> OK</button>
+        <div class="resultado200"  id="resultado200"></div>
+        <div class="resultado100"  id="resultado100"></div>
+        <div class="resultado50"  id="resultado50"></div>
+        <div class="resultado20"  id="resultado20"></div>
+        <div class="resultado10"  id="resultado10"></div>
+        <div class="resultado5"  id="resultado5"></div>
+        <div class="resultado2"  id="resultado2"></div>
+</body>  
+   
+<script>
+        function Sacar()
+        {
+            v = parseInt(valor.value);
+            valor.value ="";
+            resultado200.innerHTML = "";
+            resultado100.innerHTML = "";
+            resultado50.innerHTML = "";
+            resultado20.innerHTML = "";
+            resultado10.innerHTML = "";
+            resultado5.innerHTML = "";
+            resultado2.innerHTML = "";
+           
+            while (v>=200)
+            {
+                resultado200.innerHTML += "<img src = '200.jpg' width= '100px'>";
+                v=v-200;
+                
+            }
+            while (v>=100)
+            {
+                resultado100.innerHTML += "<img src = '100.jpg' width= '100px'>";
+                v=v-100;
+                
+            }
+            while (v>=50)
+            {
+                resultado50.innerHTML += "<img src = '50.jpg' width= '100px'>";
+                v=v-50;
+                
+            }
+            while (v>=20)
+            {
+                resultado20.innerHTML += "<img src = '20.jpg' width= '100px'>";
+                v=v-20;
+                
+            }
+            while (v>=10)
+            {
+                resultado10.innerHTML += "<img src = '10.jpg' width= '100px'>";
+                v=v-10;
+                
+            }
+            while (v>=5 && (v>+1) %5 ==0)
+            {
+                resultado5.innerHTML += "<img src = '5.jpg' width= '100px'>";
+                v=v-5;
+                
+            }
+            while (v>=2)
+            {
+                resultado2.innerHTML += "<img src = '2.jpg' width= '100px'>";
+                v=v-2;
+                
+            }
+
+
+        }   
+        
+    </script>
+ 
+
+</html>
